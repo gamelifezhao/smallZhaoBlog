@@ -1,3 +1,5 @@
+"use client";
+
 import { animated, useSpring, useSprings } from "@react-spring/web";
 import { useGesture } from "@use-gesture/react";
 import * as React from "react";
