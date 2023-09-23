@@ -16,6 +16,9 @@
 }
 
 body {
+  position: relative;
+  width: 100vw;
+  padding-top: 40px;
   color: #ffffff;
   background: linear-gradient(
       to bottom,
@@ -24,7 +27,12 @@ body {
     )
     rgb(var(--background-start-rgb));
   background: black; /* 将背景颜色设置为黑色 */
-  background-image: url("../images/beams-template-header.png"); /* 设置渐变背景 */
-  /*  background-repeat: no-repeat; 禁止背景重复 */
+  background-image: radial-gradient(
+      103.72% 46.58% at 50% 0,
+      hsla(0, 0%, 100%, 0.09) 0,
+      hsla(0, 0%, 100%, 0) 100%
+    ),
+    url("../images/beams-template-header.png");
+  /* 设置渐变背景 */
   background-size: cover; /* 背景大小设置为覆盖整个元素 */
 }

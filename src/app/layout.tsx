@@ -1,8 +1,8 @@
+import Navbar from "@/components/Navbar";
 import TemptingButton from "@/components/TemptingButton";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Link from "next/link";
 
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,21 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">首页</Link>
-            </li>
-            <li>
-              <Link href="/blog-home">BLOG</Link>
-            </li>
-            <li>
-              <Link href="/contact">坚硬下的柔软需要被治愈</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="bg-white bg-opacity-5 w-70vw h-screen w-3/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="flex flex-1 justify-end md:justify-center">
+          <Navbar />
+        </div>
         <TemptingButton />
-
         {children}
       </body>
     </html>

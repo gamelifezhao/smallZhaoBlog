@@ -23,8 +23,8 @@ export default () => {
 
   const [{ x, y, opacity }, api] = useSpring(
     () => ({
-      x: 0,
-      y: 0,
+      x: 1000,
+      y: 800,
       opacity: 0,
     }),
     []
@@ -231,7 +231,6 @@ const BlurredBackground = styled(animated.div, {
   display: "flex",
   flexDirection: "column",
   gap: 8,
-  backdropFilter: "blur(8px)",
   alignItems: "center",
   touchAction: "none",
 });
