@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      padding: {
+        '5/100': '5%',
+        '10/100': '20%',
+        // 添加其他百分比内边距类名...
+      },
+      fontSize: {
+        '3r': '3rem'
+      }
     },
   },
   plugins: [],

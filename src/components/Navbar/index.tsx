@@ -48,7 +48,6 @@ function NavItem({
 
 export default () => {
   const pathname = usePathname();
-  console.log("🚀 ~ file: index.tsx:8 ~ pathname:", pathname);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const radius = useMotionValue(0);

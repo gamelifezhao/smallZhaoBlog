@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import TemptingButton from "@/components/TemptingButton";
 import type { Metadata } from "next";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 
