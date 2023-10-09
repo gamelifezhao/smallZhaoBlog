@@ -1,8 +1,10 @@
 "use client";
 import Avatar from "@/components/Avatar";
+import Photos from "@/components/Photos";
 import { motion } from "framer-motion";
 import { SparkleIcon, UserSecurityIcon } from "@/assets/index";
 import Balancer from "react-wrap-balancer";
+import BlogPostCard from "@/components/BlogPostCard";
 import { SocialLink } from "@/components/links";
 const Developer = () => {
   return (
@@ -22,7 +24,7 @@ const Gaming = () => {
         <span className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 border border-pink-700 bg-zinc-50 dark:border-pink-400" />
         <span className="absolute -right-0.5 -top-0.5 h-1.5 w-1.5 border border-pink-700 bg-zinc-50 dark:border-pink-400" />
       </span>
-      不被定义之人
+      开发者
     </span>
   );
 };
@@ -47,9 +49,9 @@ function Founder() {
 
 export default () => {
   return (
-    <div className="mx-auto px-10/100 pt-10 z-10 relative">
+    <div className="mx-auto  pt-10 z-10 relative">
       <motion.h1
-        className="pl-32 text-3r"
+        className=" text-3r px-22/100"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -67,7 +69,7 @@ export default () => {
         <Founder />
       </motion.h1>
       <motion.p
-        className="pl-32 mt-6 text-base text-zinc-500 dark:text-zinc-400"
+        className=" mt-6 text-base text-zinc-500 dark:text-zinc-400 px-22/100"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -80,17 +82,12 @@ export default () => {
       >
         <Balancer>
           我是 small Zhao
-          也可以叫我闹子，INTP(以思考为主导的人格)，如果你也思考过生命的意义我想我们会是很好的朋友
+          我很高兴能够在这篇博客中向您介绍一下我自己。我是一个充满激情、充满好奇心的个体，对生活中的各种经历和挑战充满热情。希望通过这个博客，您能更深入地了解我，我们可以一起探索这个丰富多彩的世界！(目前暂不支持移动端)
           <br />
-          间歇性失忆，对技术的追求是永远的（当然了也存在一直在往前走基础丢的一干二净😭）
-          <br />
-          旅游过很多城市，认识过很多人
-          <br />
-          react 是理想 vue 是生活 希望生活越来越好，所以我选react😝
         </Balancer>
       </motion.p>
       <motion.div
-        className="pl-32 mt-6 flex gap-6"
+        className="px-22/100 mt-6 flex gap-6"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -113,6 +110,11 @@ export default () => {
           platform="mail"
         />
       </motion.div>
+      <Photos />
+      <BlogPostCard
+        url="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e98995817ab54dd3ae89d6bf988edc07~tplv-k3u1fbpfcp-watermark.image?"
+        name={"呆呆呆呆呆呆呆呆的碎碎念"}
+      />
     </div>
   );
 };

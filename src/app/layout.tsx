@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-white bg-opacity-5 w-70vw h-screen w-3/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="flex flex-1 justify-end md:justify-center">
           <Navbar />
         </div>
