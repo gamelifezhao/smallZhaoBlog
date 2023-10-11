@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import Avatar from "@/components/Avatar";
 import Photos from "@/components/Photos";
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import { SparkleIcon, UserSecurityIcon } from "@/assets/index";
 import Balancer from "react-wrap-balancer";
 import BlogPostCard from "@/components/BlogPostCard";
 import { SocialLink } from "@/components/links";
+import Utterances from "@/components/Utterances";
 const Developer = () => {
   return (
     <span className="text-3r">
@@ -115,6 +117,7 @@ export default () => {
         url="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e98995817ab54dd3ae89d6bf988edc07~tplv-k3u1fbpfcp-watermark.image?"
         name={"呆呆呆呆呆呆呆呆的碎碎念"}
       />
+      <Utterances id="1" />
     </div>
   );
 };
