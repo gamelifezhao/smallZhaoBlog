@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const SemiWebpackPlugin = require("@douyinfe/semi-webpack-plugin").default;
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
+// 配置动态主题
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//   enabled: process.env.ANALYZE === "true",
+// });
+const semi = require("@douyinfe/semi-next").default({
+  /* the extension options */
 });
 const nextConfig = {
   server: {
@@ -19,15 +22,6 @@ const nextConfig = {
       },
     ];
   },
-  webpack: (config, ctx) => {
-    config.plugins.push(
-      new SemiWebpackPlugin({
-        theme: "semi-theme-small-zhao-test",
-        // include: "~/scss/local.scss",
-      })
-    );
-    return config;
-  },
   transpilePackages: [
     "@douyinfe/semi-ui",
     "@douyinfe/semi-icons",
@@ -35,4 +29,4 @@ const nextConfig = {
   ],
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = semi(nextConfig);

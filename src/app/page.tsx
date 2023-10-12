@@ -8,13 +8,9 @@ import Balancer from "react-wrap-balancer";
 import BlogPostCard from "@/components/BlogPostCard";
 import { SocialLink } from "@/components/links";
 import Utterances from "@/components/Utterances";
-// import { Button } from "@douyinfe/semi-ui";
 const Developer = () => {
   return (
     <span className="text-3r">
-      {/* <Button theme="solid" type="primary" style={{ marginRight: 8 }}>
-        深色主要
-      </Button> */}
       <span className="font-mono">&lt;</span>开发者
       <span className="font-mono">/&gt;</span>
       <span className="text-lg" />
