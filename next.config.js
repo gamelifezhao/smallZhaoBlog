@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+const SemiWebpackPlugin = require("@douyinfe/semi-webpack-plugin").default;
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 const nextConfig = {
   server: {
     port: 5000, // 指定要使用的端口号
@@ -14,6 +19,20 @@ const nextConfig = {
       },
     ];
   },
+  webpack: (config, ctx) => {
+    config.plugins.push(
+      new SemiWebpackPlugin({
+        theme: "semi-theme-small-zhao-test",
+        // include: "~/scss/local.scss",
+      })
+    );
+    return config;
+  },
+  transpilePackages: [
+    "@douyinfe/semi-ui",
+    "@douyinfe/semi-icons",
+    "@douyinfe/semi-illustrations",
+  ],
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);
