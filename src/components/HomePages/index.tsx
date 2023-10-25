@@ -118,6 +118,10 @@ export default () => {
       <BlogPostCard
         url="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e98995817ab54dd3ae89d6bf988edc07~tplv-k3u1fbpfcp-watermark.image?"
         name={"呆呆呆呆呆呆呆呆的碎碎念"}
+        text={
+          "点击此处进入呆呆呆的掘金，小部分文章因为工作要求会在掘金更新,本网站主要用于一些实验性的学习和实践"
+        }
+        href={"https://juejin.cn/user/2942755031223111"}
       />
       {/* <Loading /> */}
       <Utterances id="1" />
